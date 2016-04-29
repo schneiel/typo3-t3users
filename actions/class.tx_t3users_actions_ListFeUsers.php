@@ -114,7 +114,7 @@ class tx_t3users_actions_ListFeUsers extends tx_rnbase_action_BaseIOC {
 	}
 
 	function getTemplateName() { return 'feuserlist';}
-	function getViewClassName() { return 'tx_t3users_views_ListFeUsers';}
+	function getViewClassName() { return 'tx_t3users_views_ListFeUsersTwig';}
 }
 
 if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/t3users/actions/class.tx_t3users_actions_ListFeUsers.php'])	{
