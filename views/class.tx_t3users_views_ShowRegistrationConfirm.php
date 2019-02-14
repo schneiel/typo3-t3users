@@ -41,7 +41,7 @@ class tx_t3users_views_ShowRegistrationConfirm extends tx_rnbase_view_Base
     public function createOutput($template, &$viewData, &$configurations, &$formatter)
     {
         $subpartName = '###PART_'.$viewData->offsetGet('part').'###';
-        $template = $formatter->cObj->getSubpart($template, $subpartName);
+        $template = $formatter->templateService->getSubpart($template, $subpartName);
 
         if (tx_rnbase_util_BaseMarker::containsMarker($template, 'FEUSER_')) {
             $marker = tx_rnbase::makeInstance('tx_t3users_util_FeUserMarker');

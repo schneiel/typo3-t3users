@@ -27,7 +27,7 @@
 
 tx_rnbase::load('tx_rnbase_view_Base');
 tx_rnbase::load('tx_rnbase_util_BaseMarker');
-
+tx_rnbase::load('tx_rnbase_util_Templates');
 
 /**
  * Viewklasse für die Darstellung der Loginbox
@@ -41,7 +41,7 @@ class tx_t3users_views_Login extends tx_rnbase_view_Base
      * @param string $template
      * @param arrayobject $viewData
      * @param tx_rnbase_configurations $configurations
-     * @param tx_rnbase_util_FormatUtil $formatter
+     * @param tx_rnbase_util_Templates $formatter
      * @return string
      */
     public function createOutput($template, &$viewData, &$configurations, &$formatter)
@@ -73,9 +73,9 @@ class tx_t3users_views_Login extends tx_rnbase_view_Base
             array()
         );
 
-        $out = $formatter->cObj->substituteMarkerArrayCached($template, $markerArray, $subpartArray, $wrappedSubpartArray);
+        $out = tx_rnbase_util_Templates::substituteMarkerArrayCached($template, $markerArray, $subpartArray, $wrappedSubpartArray);
         // We do it twice, since some marker contain other markers
-        $out = $formatter->cObj->substituteMarkerArrayCached($out, $markerArray, $subpartArray, $wrappedSubpartArray);
+        $out = tx_rnbase_util_Templates::substituteMarkerArrayCached($out, $markerArray, $subpartArray, $wrappedSubpartArray);
 
         if (is_object($feuser)) {
             // Jetzt mit dem FEuser-Marker drüber
