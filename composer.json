@@ -1,49 +1,46 @@
 {
-    "name": "dmk/t3users",
-    "description": "Enhanced frontend user management for TYPO3. User registration, login and management in a single extension.",
-    "version": "3.0.18",
-    "type": "typo3-cms-extension",
-    "keywords": [
+    "name" : "dmk/t3users",
+    "description" : "Enhanced frontend user management for TYPO3. User registration, login and management in a single extension.",
+    "version" : "3.0.18",
+    "type" : "typo3-cms-extension",
+    "keywords" : [
         "TYPO3 CMS",
         "feuser",
         "login",
         "registration",
         "log"
     ],
-    "homepage": "http://www.dmk-ebusiness.de/",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Michael Wagner",
-            "email": "michael.wagner@dmk-ebusiness.de",
-            "role": "Developer"
-        },
-        {
-            "name": "Hannes Bochmann",
-            "email": "hannes.bochmann@dmk-ebusiness.de",
-            "role": "Developer"
-        },
-        {
-            "name": "René Nitzsche",
-            "email": "nitzsche@dmk-ebusiness.de",
-            "role": "Developer"
+    "homepage" : "http://www.dmk-ebusiness.de/",
+    "license" : "GPL-2.0-or-later",
+    "authors" : [{
+            "name" : "Michael Wagner",
+            "email" : "michael.wagner@dmk-ebusiness.de",
+            "role" : "Developer"
+        }, {
+            "name" : "Hannes Bochmann",
+            "email" : "hannes.bochmann@dmk-ebusiness.de",
+            "role" : "Developer"
+        }, {
+            "name" : "René Nitzsche",
+            "email" : "nitzsche@dmk-ebusiness.de",
+            "role" : "Developer"
         }
     ],
-    "support": {
-        "email": "dev@dmk-ebusiness.de",
-        "source": "https://github.com/DMKEBUSINESSGMBH/typo3-t3users",
-        "issues": "https://github.com/DMKEBUSINESSGMBH/typo3-t3users"
+    "support" : {
+        "email" : "dev@dmk-ebusiness.de",
+        "source" : "https://github.com/DMKEBUSINESSGMBH/typo3-t3users",
+        "issues" : "https://github.com/DMKEBUSINESSGMBH/typo3-t3users"
     },
-    "replace": {
-        "t3users": "self.version",
-        "typo3-ter/t3users": "self.version"
+    "replace" : {
+        "t3users" : "self.version",
+        "typo3-ter/t3users" : "self.version"
     },
-    "require": {
-        "typo3/cms": "~4.5 || ~6.2 || ~7.6 || ~8.7",
-        "digedag/rn-base": ">=1.4"
+    "require" : {
+        "typo3/cms" : "~4.5 || ~6.2 || ~7.6 || ~8.7 || ~9.5",
+        "digedag/rn-base" : ">=1.4"
     },
-    "autoload": {
-        "classmap": [
+    "autoload" : {
+        "classmap" : [
             "actions/",
             "controllers/",
             "exceptions/",
