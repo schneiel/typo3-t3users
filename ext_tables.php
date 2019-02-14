@@ -96,12 +96,6 @@ $TCA['tt_content']['types']['list']['subtypes_excludelist']['tx_t3users_main'] =
 // Das tt_content-Feld pi_flexform einblenden
 $TCA['tt_content']['types']['list']['subtypes_addlist']['tx_t3users_main'] = 'pi_flexform';
 
-tx_rnbase_util_Extensions::addPiFlexFormValue('tx_t3users_main', 'FILE:EXT:'.$_EXTKEY.'/Configuration/Flexform/flexform_main.xml');
-tx_rnbase_util_Extensions::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/locallang_db.php:plugin.t3users.label','tx_t3users_main'));
-
-
-tx_rnbase_util_Extensions::addStaticFile($_EXTKEY, 'static/ts/', 'FE User Management');
-
 if (TYPO3_MODE == 'BE') {
     tx_rnbase::load('tx_rnbase_util_TYPO3');
     if (!tx_rnbase_util_TYPO3::isTYPO80OrHigher()) {
