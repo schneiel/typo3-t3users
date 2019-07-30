@@ -38,12 +38,22 @@
         "t3users": "self.version",
         "typo3-ter/t3users": "self.version"
     },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/Baachi/phpstan-typo3.git"
+    }
+    ],
     "require": {
         "typo3/cms-core": "^6.2 || ^7.6 || ^8.7 || ^9.5",
         "digedag/rn-base": ">=1.4"
     },
     "require-dev": {
-        "nimut/testing-framework": "^4.0"
+        "nimut/testing-framework": "^4.0",
+        "friendsofphp/php-cs-fixer": "2.15.*",
+        "phpstan/phpstan": "^0.11",
+        "saschaegerer/phpstan-typo3": "dev-feature/update-phpstan",
+        "dmk/phpstan-rnbase": "^0.0.1",
+        "typo3/testing-framework": "*"
     },
     "autoload": {
         "classmap": [
