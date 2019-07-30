@@ -42,7 +42,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * 3. Show Welcome Message (if logged in right now)
      * 4. Show Status (if logged in)
      *
-     * @param array_object $parameters
+     * @param ArrayObject              $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      * @return string error msg or null
@@ -97,7 +97,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
     /**
      * Send confirmation mail to user
      *
-     * @param array_object $parameters
+     * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      */
@@ -141,7 +141,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
     /**
      * Send new password to user
      *
-     * @param array_object $parameters
+     * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      */
@@ -184,7 +184,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * User is not logged in
      *
      * @param string $action
-     * @param array_object $parameters
+     * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      */
@@ -252,7 +252,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * User is logged in. Show Status and logout-Button
      *
      * @param string $action
-     * @param array_object $parameters
+     * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      * @param tx_t3users_models_feuser $feuser
@@ -299,7 +299,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * User logged in right now. Show Welcome Message
      *
      * @param string $action
-     * @param array_object $parameters
+     * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
      * @param array $viewData
      * @param tx_t3users_models_feuser $feuser
@@ -366,7 +366,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * field felogin_redirectPid
      *
      * @param tx_t3users_models_feuser $feuser
-     * @return pid or null
+     * @return string|null pid or null
      */
     protected function getLoginPageByGroup($feuser)
     {

@@ -38,6 +38,9 @@ tx_rnbase::load('Tx_Rnbase_Frontend_Marker_Utility');
  */
 class tx_t3users_util_FeUserMarker extends tx_rnbase_util_SimpleMarker
 {
+    /** @var array */
+    private $options;
+
     /**
      * Initialisiert den Marker Array.
      * Optionen:

@@ -46,8 +46,7 @@ class tx_t3users_mod_Module extends tx_rnbase_mod_BaseModule
     {
         $modUrl = Tx_Rnbase_Backend_Utility::getModuleUrl(
             'web_T3usersBackend',
-            array('id' => $this->getPid()),
-            ''
+            array('id' => $this->getPid())
         );
 
         return '<form action="' . $modUrl . '" method="POST" name="editform" id="editform">';

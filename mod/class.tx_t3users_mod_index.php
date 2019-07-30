@@ -40,11 +40,20 @@ define('ICON_FATAL', 3);
  */
 class tx_t3users_mod_index extends Tx_Rnbase_Backend_AbstractFunctionModule
 {
+    protected $MCONF;
+
+    protected $id;
+
+    /** @var \TYPO3\CMS\Backend\Template\DocumentTemplate */
+    protected $doc;
+
+    /** @var Tx_Rnbase_Backend_Form_ToolBox */
+    protected $formTool;
 
     /**
      * Returns the module menu
      *
-     * @return  Array with menuitems
+     * @return array with menuitems
      */
     public function modMenu()
     {
@@ -54,6 +63,7 @@ class tx_t3users_mod_index extends Tx_Rnbase_Backend_AbstractFunctionModule
 //      "tx_lmo2cfcleague_modfunc1_check" => "",
         );
     }
+
     public function init(&$pObj, $MCONF)
     {
         parent::init($pObj, $MCONF);
@@ -65,7 +75,7 @@ class tx_t3users_mod_index extends Tx_Rnbase_Backend_AbstractFunctionModule
     /**
      * Main method of the module
      *
-     * @return  HTML
+     * @return string HTML
      */
     public function main()
     {
@@ -80,7 +90,7 @@ Vorgehen
         $this->formTool = tx_rnbase::makeInstance('Tx_Rnbase_Backend_Form_ToolBox');
         $this->formTool->init($this->doc, $this);
 
-        $content .= tx_t3users_util_LoginAsFEUser::hijackUser();
+        $content = tx_t3users_util_LoginAsFEUser::hijackUser();
 
         $module = tx_rnbase::makeInstance('tx_t3users_mod_mUserList', $this);
         $content .= $module->handleRequest($this->pObj->id);

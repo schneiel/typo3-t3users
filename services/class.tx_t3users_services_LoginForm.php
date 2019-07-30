@@ -97,7 +97,7 @@ class tx_t3users_services_LoginForm extends Tx_Rnbase_Service_Base
         $code->jsFiles = '<script language="JavaScript" type="text/javascript" src="typo3/md5.js"></script>';
         $chal_val = md5(time().getmypid().uniqid());
         tx_rnbase::load('tx_rnbase_util_DB');
-        tx_rnbase_util_DB::doInsert('tx_kbmd5fepw_challenge', array('challenge' => $chal_val, 'tstamp' => time()), 0);
+        Tx_Rnbase_Database_Connection::getInstance()->doInsert('tx_kbmd5fepw_challenge', array('challenge' => $chal_val, 'tstamp' => time()), 0);
 
         $code->formFields = '<input type="hidden" name="challenge" value="'.$chal_val.'">';
         if (!$code->onsubmit) {

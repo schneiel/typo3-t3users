@@ -34,6 +34,8 @@ tx_rnbase::load('tx_t3users_util_Decorator');
 class tx_t3users_mod_mUserList
 {
     public $mod;
+    public $doc;
+
     public function tx_t3users_mod_mUserList(&$mod)
     {
         $this->mod = $mod;
@@ -55,7 +57,7 @@ class tx_t3users_mod_mUserList
         }
 
         $searcher = $this->getUserSearcher($options);
-        $content .= $this->doc->section($LANG->getLL('msg_search_feuser'), $searcher->getSearchForm(), 0, 1);
+        $content = $this->doc->section($LANG->getLL('msg_search_feuser'), $searcher->getSearchForm(), 0, 1);
         $content .= $this->doc->spacer(5);
         $content .= $this->doc->spacer(5);
         $content .= $searcher->getResultList();

@@ -44,7 +44,7 @@ class tx_t3users_mod_FeUser extends tx_rnbase_mod_ExtendedModFunc
     /**
      * Method getFuncId
      *
-     * @return  string
+     * @return string
      */
     public function getFuncId()
     {
@@ -64,7 +64,8 @@ class tx_t3users_mod_FeUser extends tx_rnbase_mod_ExtendedModFunc
     }
 
     /**
-     *
+     * @param string $selStr
+     * @return bool
      */
     protected function makeSubSelectors(&$selStr)
     {

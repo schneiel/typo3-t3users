@@ -37,14 +37,14 @@ class tx_t3users_actions_ShowFeUser extends tx_rnbase_action_BaseIOC
   /**
    *
    *
-   * @param array_object $parameters
+   * @param ArrayObject $parameters
    * @param tx_rnbase_configurations $configurations
    * @param array $viewData
-   * @return string error msg or null
+   * @return string|null error msg or null
    */
     public function handleRequest(&$parameters, &$configurations, &$viewData)
     {
-        $userSrv = tx_t3users_util_serviceRegistry::getFeUserService();
+        $userSrv = tx_t3users_util_ServiceRegistry::getFeUserService();
 
         // gegenwärtig angemeldeten User ausgeben, wenn Option gesetzt
         if ($configurations->getBool('feuserdetails.currentUser', true, false)) {

@@ -35,6 +35,12 @@ tx_rnbase::load('Tx_Rnbase_Backend_Lister_AbstractLister');
  */
 class tx_t3users_mod_lister_FeUser extends Tx_Rnbase_Backend_Lister_AbstractLister
 {
+    /** @var array */
+    private $options;
+
+    /** @var tx_t3users_mod_util_Selector */
+    private $selector
+
     /**
      * Liefert die Funktions-Id
      */

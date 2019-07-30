@@ -34,8 +34,8 @@ class tx_t3users_hooks_getMainFields
             if (!strstr($row['uid'], 'NEW')) {
                 tx_rnbase::load('tx_rnbase_util_DB');
                 $row['birthday'] = ($GLOBALS['TYPO3_CONF_VARS']['SYS']['USdateFormat'] == '1') ?
-                                    tx_rnbase_util_DB::date_mysql2mdY($row['birthday']) :
-                                    tx_rnbase_util_DB::date_mysql2dmY($row['birthday']);
+                    Tx_Rnbase_Database_Connection::getInstance()->date_mysql2mdY($row['birthday']) :
+                    Tx_Rnbase_Database_Connection::getInstance()->date_mysql2dmY($row['birthday']);
             }
         }
     }

@@ -44,6 +44,7 @@ class tx_t3users_models_feuser extends tx_rnbase_model_base
         $this->bEnableFieldsOff = $bEnableFieldsOff;
         $this->init($rowOrUid);
     }
+
     public function tx_t3users_models_feuser($rowOrUid, $bEnableFieldsOff = false)
     {
         $this->bEnableFieldsOff = $bEnableFieldsOff;
@@ -66,7 +67,7 @@ class tx_t3users_models_feuser extends tx_rnbase_model_base
                 $options = array();
                 $options['where'] = 'uid='.intval($this->uid);
                 $options['enablefieldsoff'] = true;
-                $result = tx_rnbase_util_DB::doSelect('*', $this->getTableName(), $options);
+                $result = Tx_Rnbase_Database_Connection::getInstance()->doSelect('*', $this->getTableName(), $options);
                 $this->record =  count($result) > 0 ? $result[0] : array('uid' => $rowOrUid);
             }
             // Der Record sollte immer ein Array sein

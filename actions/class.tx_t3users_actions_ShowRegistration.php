@@ -37,8 +37,15 @@ tx_rnbase::load('tx_rnbase_util_Misc');
 class tx_t3users_actions_ShowRegistration extends tx_rnbase_action_BaseIOC
 {
     private $feuser;
+
     private $afterRegistrationPID;
+
+    /** @var bool  */
     private $userDataSaved = false;
+
+    /** @var array */
+    private $regValues;
+
 
     public function handleRequest(&$parameters, &$configurations, &$viewData)
     {

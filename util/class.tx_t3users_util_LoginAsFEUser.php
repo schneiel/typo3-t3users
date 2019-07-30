@@ -86,7 +86,7 @@ class tx_t3users_util_LoginAsFEUser
         $where .= tx_rnbase_util_TYPO3::isTYPO87OrHigher() ? '' : ' AND fe_sessions.ses_name = \'fe_typo_user\' ';
         $where = sprintf($where, $GLOBALS['TYPO3_DB']->fullQuoteStr($fesessionId, 'fe_sessions'));
         $values = array('ses_userid' => $feuserid , 'ses_tstamp' => $GLOBALS['EXEC_TIME']);
-        tx_rnbase_util_DB::doUpdate('fe_sessions', $where, $values, 0);
+        Tx_Rnbase_Database_Connection::getInstance()->doUpdate('fe_sessions', $where, $values, 0);
     }
 
     private static function createFeUserSession($fesessionId, $feuserid)
@@ -99,7 +99,7 @@ class tx_t3users_util_LoginAsFEUser
             SetCookie('fe_typo_user', $fesessionId, 0, '/', $cookieDomain ? $cookieDomain : '');
         }
         $values = self::getNewSessionRecord($fesessionId, $feuserid);
-        tx_rnbase_util_DB::doInsert('fe_sessions', $values, 0);
+        Tx_Rnbase_Database_Connection::getInstance()->doInsert('fe_sessions', $values, 0);
     }
 
     private static function getNewSessionRecord($sessionId, $userId)

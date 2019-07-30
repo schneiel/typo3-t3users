@@ -34,7 +34,7 @@ class tx_t3users_hooks_processDatamap
      * @param string $table
      * @param int $id
      * @param array $fieldArray
-     * @param tce_main $tce
+     * @param mixed $tce
      */
     public function processDatamap_postProcessFieldArray($status, $table, $id, &$fieldArray, &$tce)
     {

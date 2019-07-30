@@ -35,10 +35,20 @@ tx_rnbase::load('Tx_Rnbase_Backend_Utility');
 class tx_t3users_mod_userSearcher
 {
     private $mod;
+
     private $data;
+
     private $searchButtonName = 'searchUser';
+
     private $SEARCH_SETTINGS;
+
     private $bAllowNonAdmins;
+
+    private $options;
+
+    private $formTool;
+
+    private $resultSize;
 
     public function tx_t3users_mod_userSearcher(&$mod, $options = array())
     {

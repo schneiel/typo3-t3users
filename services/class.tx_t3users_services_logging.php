@@ -79,7 +79,7 @@ class tx_t3users_services_logging extends Tx_Rnbase_Service_Base
         $data = $log->getData();
         $data = (is_array($data)) ? serialize($data) : $data;
         $row['data'] = trim($data);
-        tx_rnbase_util_DB::doInsert('tx_t3users_log', $row, 0);
+        Tx_Rnbase_Database_Connection::getInstance()->doInsert('tx_t3users_log', $row, 0);
     }
 
     /**

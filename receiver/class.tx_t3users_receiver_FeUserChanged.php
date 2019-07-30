@@ -35,6 +35,9 @@ tx_rnbase::load('tx_mkmailer_receiver_FeUser');
  */
 class tx_t3users_receiver_FeUserChanged extends tx_mkmailer_receiver_FeUser
 {
+    /** @var string */
+    private $email;
+
     public function getValueString()
     {
         return is_object($this->obj) ? $this->obj->uid . ',' . (!empty($this->email) ? $this->email : $this->obj->record['email']) : '';

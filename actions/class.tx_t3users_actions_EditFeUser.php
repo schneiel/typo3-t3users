@@ -35,6 +35,12 @@ class tx_t3users_actions_EditFeUser extends tx_rnbase_action_BaseIOC
     /** @var Tx_Rnbase_Configuration_Processor */
     protected $configurations;
 
+    /** @var tx_mkforms_forms_Factory */
+    protected $form;
+
+    /** @var tx_t3users_models_feuser */
+    protected $editItem;
+
     /**
      * Erstmal nur das eigene Profil bearbeiten
      *
