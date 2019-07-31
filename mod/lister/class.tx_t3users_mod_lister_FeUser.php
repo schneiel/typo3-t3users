@@ -39,7 +39,7 @@ class tx_t3users_mod_lister_FeUser extends Tx_Rnbase_Backend_Lister_AbstractList
     private $options;
 
     /** @var tx_t3users_mod_util_Selector */
-    private $selector
+    private $selector;
 
     /**
      * Liefert die Funktions-Id
