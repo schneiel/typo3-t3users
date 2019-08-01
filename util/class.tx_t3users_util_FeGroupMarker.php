@@ -32,13 +32,15 @@ require_once(tx_rnbase_util_Extensions::extPath('rn_base') . 'util/class.tx_rnba
  */
 class tx_t3users_util_FeGroupMarker extends tx_rnbase_util_BaseMarker
 {
-  
+    /** @var array */
+    private $options;
+
   /**
    * Initialisiert den Marker Array.
    * Optionen:
    * - hideregistrations
    * - hideuploads
-   * @param array $options Hinweise an den Marker
+   * @param array|false $options Hinweise an den Marker
    */
     public function __construct($options = false)
     {
@@ -49,19 +51,19 @@ class tx_t3users_util_FeGroupMarker extends tx_rnbase_util_BaseMarker
    * Initialisiert die Labels für die Profile-Klasse
    *
    * @param tx_rnbase_util_FormatUtil $formatter
-   * @param array $defaultMarkerArr
+   * @param array|int $defaultMarkerArr
    */
     public function initLabelMarkers(&$formatter, $confId, $defaultMarkerArr = 0, $marker = 'FEGROUP')
     {
-        return $this->prepareLabelMarkers('tx_t3users_models_fegroup', $formatter, $confId, $defaultMarkerArr, $marker);
+        return $this->prepareLabelMarkers('tx_t3users_models_fegroup', $formatter, $confId, $marker, $defaultMarkerArr);
     }
 
   /**
    * @param string $template das HTML-Template
    * @param tx_t3users_models_fegroup $fegroup The fe group
-   * @param $formatter der zu verwendente Formatter
+   * @param object $formatter der zu verwendente Formatter
    * @param string $confId Pfad der TS-Config des Objekt, z.B. 'listView.event.'
-   * @param $marker Name des Markers für ein Object, z.B. FEUSER
+   * @param string $marker Name des Markers für ein Object, z.B. FEUSER
    *        Von diesem String hängen die entsprechenden weiteren Marker ab: ###FEGROUP_TITLE###
    * @return String das geparste Template
    */

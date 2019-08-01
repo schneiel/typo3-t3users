@@ -100,8 +100,8 @@ class ux_tslib_feuserauth extends tx_t3users_FrontendUserAuthenticationBase
      * Update additional fields for feuser
      * Than create a user session record.
      *
-     * @param   array       user data array
-     * @return  void
+     * @param array $tempuser user data array
+     * @return void
      */
     public function createUserSession($tempuser)
     {

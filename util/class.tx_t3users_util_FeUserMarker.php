@@ -46,7 +46,7 @@ class tx_t3users_util_FeUserMarker extends tx_rnbase_util_SimpleMarker
      * Optionen:
      * - hideregistrations
      * - hideuploads
-     * @param array $options Hinweise an den Marker
+     * @param array|bool $options Hinweise an den Marker
      */
     public function __construct($options = false)
     {
@@ -81,7 +81,7 @@ class tx_t3users_util_FeUserMarker extends tx_rnbase_util_SimpleMarker
 
     /**
      * @param string $template das HTML-Template
-     * @param Tx_Rnbase_Domain_Model_DomainInterface $item
+     * @param object $feuser
      * @param tx_rnbase_util_FormatUtil $formatter der zu verwendente Formatter
      * @param string $confId Pfad der TS-Config
      * @param string $marker Name des Markers
@@ -172,8 +172,8 @@ class tx_t3users_util_FeUserMarker extends tx_rnbase_util_SimpleMarker
     /**
      * Führt vor dem parsen Änderungen am Model durch.
      *
-     * @param Tx_Rnbase_Domain_Model_DomainInterface $item
-     * @param tx_rnbase_configurations $configurations
+     * @param Tx_Rnbase_Domain_Model_DataInterface $item
+     * @param Tx_Rnbase_Configuration_ProcessorInterface $configurations
      * @param string $confId
      *
      * @return void
@@ -220,11 +220,11 @@ class tx_t3users_util_FeUserMarker extends tx_rnbase_util_SimpleMarker
     /**
      * Links vorbereiten
      *
-     * @param tx_t3users_models_feuser $profile
-     * @param string $marker
-     * @param array $markerArray
-     * @param array $wrappedSubpartArray
-     * @param string $confId
+     * @param tx_t3users_models_feuser  $feuser
+     * @param string                    $marker
+     * @param array                     $markerArray
+     * @param array                     $wrappedSubpartArray
+     * @param string                    $confId
      * @param tx_rnbase_util_FormatUtil $formatter
      */
     protected function prepareLinks(

@@ -77,8 +77,8 @@ class tx_t3users_util_LoginAsFEUser
     /**
      * Aktualisiert die User-Session in der DB.
      *
-     * @param string $fesession
-     * @param int $feuserid
+     * @param string $fesessionId
+     * @param int    $feuserid
      */
     private static function updateFeUserSession($fesessionId, $feuserid)
     {

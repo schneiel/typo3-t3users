@@ -38,9 +38,9 @@ class tx_t3users_views_Login extends tx_rnbase_view_Base
     /**
      * Enter description here...
      *
-     * @param string $template
-     * @param arrayobject $viewData
-     * @param tx_rnbase_configurations $configurations
+     * @param string                    $template
+     * @param ArrayObject               $viewData
+     * @param tx_rnbase_configurations  $configurations
      * @param tx_rnbase_util_FormatUtil $formatter
      * @return string
      */
