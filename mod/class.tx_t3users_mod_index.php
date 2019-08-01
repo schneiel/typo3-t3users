@@ -50,6 +50,9 @@ class tx_t3users_mod_index extends Tx_Rnbase_Backend_AbstractFunctionModule
     /** @var Tx_Rnbase_Backend_Form_ToolBox */
     protected $formTool;
 
+    /** @var array */
+    protected $tableLayout;
+
     /**
      * Returns the module menu
      *

@@ -44,7 +44,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      *
      * @param ArrayObject              $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject              $viewData
      * @return string error msg or null
      */
     public function handleRequest(&$parameters, &$configurations, &$viewData)
@@ -99,7 +99,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      *
      * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      */
     private function handleRequestConfirmation(&$parameters, &$configurations, &$viewData)
     {
@@ -143,7 +143,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      *
      * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      */
     protected function handleForgotPass(&$parameters, &$configurations, &$viewData)
     {
@@ -186,7 +186,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * @param string $action
      * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      */
     protected function handleNotLoggedIn($action, &$parameters, &$configurations, &$viewData)
     {
@@ -254,7 +254,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * @param string $action
      * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      * @param tx_t3users_models_feuser $feuser
      */
     protected function handleLoggedin($action, &$parameters, &$configurations, &$viewData, &$feuser)
@@ -301,7 +301,7 @@ class tx_t3users_actions_Login extends tx_rnbase_action_BaseIOC
      * @param string $action
      * @param ArrayObject $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      * @param tx_t3users_models_feuser $feuser
      */
     protected function handleLoginConfirmed($action, $parameters, $configurations, &$viewData, $feuser)

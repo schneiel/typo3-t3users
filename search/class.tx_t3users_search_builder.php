@@ -35,8 +35,10 @@ class tx_t3users_search_builder
     /**
      * Search for feuser by email
      *
-     * @param array $fields
-     * @param string $teamUids comma separated list of team UIDs
+     * @param array  $fields
+     * @param string $email
+     * @param string $pids comma separated list of team UIDs
+     *
      * @return bool true if condition is set
      */
     public static function buildFeuserByEmail(&$fields, $email, $pids = '')

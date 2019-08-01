@@ -39,10 +39,10 @@ class tx_t3users_mod_decorator_Base extends Tx_Rnbase_Backend_Decorator_BaseDeco
 {
     /**
      *
-     * @param   string                  $value
-     * @param   string                  $colName
-     * @param   array                   $record
-     * @param   tx_rnbase_model_base    $item
+     * @param string                               $columnValue
+     * @param string                               $columnName
+     * @param array                                $record
+     * @param Tx_Rnbase_Domain_Model_DataInterface $entry
      */
     public function format(
         $columnValue,

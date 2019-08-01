@@ -117,8 +117,9 @@ class tx_t3users_mod_lister_FeUser extends Tx_Rnbase_Backend_Lister_AbstractList
 
     /**
      * Liefert die Spalten für den Decorator.
-     * @param   tx_t3users_mod_decorator_Base   $oDecorator
-     * @return  array
+     * @param array $columns
+     *
+     * @return array
      */
     protected function addDecoratorColumns(
         array &$columns

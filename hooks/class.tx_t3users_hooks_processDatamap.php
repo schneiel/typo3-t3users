@@ -55,8 +55,9 @@ class tx_t3users_hooks_processDatamap
     /**
      * Converts a date from the backend (m-d-Y or d-m-Y) into the Y-m-d format.
      * from ext cal
-     * @param       string      The date to convert.
-     * @return      string      The date in Ymd format.
+     * @param string $dateString The date to convert.
+     *
+     * @return string      The date in Ymd format.
      */
     public function convertBackendDateToYMD($dateString)
     {

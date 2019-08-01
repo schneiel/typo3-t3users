@@ -46,7 +46,7 @@ class tx_t3users_actions_EditFeUser extends tx_rnbase_action_BaseIOC
      *
      * @param tx_rnbase_IParameters $parameters
      * @param tx_rnbase_configurations $configurations
-     * @param array $viewData
+     * @param ArrayObject $viewData
      * @return string error msg or null
      */
     public function handleRequest(&$parameters, &$configurations, &$viewData)

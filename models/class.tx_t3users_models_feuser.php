@@ -79,7 +79,7 @@ class tx_t3users_models_feuser extends tx_rnbase_model_base
      * Liefert die Instance mit der übergebenen UID. Die Daten werden gecached, so daß
      * bei zwei Anfragen für die selbe UID nur ein DB Zugriff erfolgt.
      *
-     * @param int $uid
+     * @param int|null $data
      * @return tx_t3users_models_feuser
      */
     public static function getInstance($data = null)

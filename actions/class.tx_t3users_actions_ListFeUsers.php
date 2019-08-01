@@ -37,9 +37,9 @@ class tx_t3users_actions_ListFeUsers extends tx_rnbase_action_BaseIOC
     /**
      *
      *
-     * @param ArrayObject              $parameters
-     * @param tx_rnbase_configurations $configurations
-     * @param array                    $viewData
+     * @param ArrayObject                    $parameters
+     * @param tx_rnbase_configurations       $configurations
+     * @param ArrayObject                    $viewData
      * @return string error msg or null
      */
     public function handleRequest(&$parameters, &$configurations, &$viewData)

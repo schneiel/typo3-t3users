@@ -43,13 +43,13 @@ class tx_t3users_models_fegroup extends tx_rnbase_model_base
    * Liefert die Instance mit der übergebenen UID. Die Daten werden gecached, so daß
    * bei zwei Anfragen für die selbe UID nur ein DB Zugriff erfolgt.
    *
-   * @param int $uid
+   * @param int|null $data
    * @return tx_t3users_models_feuser
    */
     public static function getInstance($data = null)
     {
         $uid = (int) $data;
-        if (!uid) {
+        if (!$uid) {
             throw new Exception('No uid for fe_group given!');
         }
         if (!is_object(self::$instances[$uid])) {

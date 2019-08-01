@@ -103,10 +103,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
     /**
      * Get the number of users or user-objects currently online
      * This is possible only, if extension DBAL is active.
-     * @param array $config
-     *      pids provides the users in a PID
-     *      count (true = number of users) (false = array with user-objects)
-     * @return int / array
+     *
      * @todo since TYPO3 8.7 the session backend can be in Redis and not the database, so
      * accessing FESESSION.* might have no effect
      * @todo why is only session timeout considered? Should fe_users.is_online not
@@ -120,6 +117,8 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      * $GLOBALS['TYPO3_CONF_VARS']['FE']['permalogin'] is set to "0" users without permalogin loosing
      * there session when the close the browser. That should be considered because otherwise they
      * would could as logged in users.
+     *
+     * @return array
      */
     public function getOnlineUsers($options = null)
     {
@@ -456,7 +455,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      * Add all given group UIDs from FE User
      *
      * @param tx_t3users_models_feuser $feuser
-     * @param string $feGroupUids comma separated group uids
+     * @param string $feGroupIds comma separated group uids
      */
     public function addFeGroups(&$feuser, $feGroupIds)
     {
@@ -481,7 +480,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      * Remove all given group UIDs from FE User
      *
      * @param tx_t3users_models_feuser $feuser
-     * @param string $feGroupUids comma separated group uids
+     * @param string $feGroupIds comma separated group uids
      */
     public function removeFeGroup($feuser, $feGroupIds)
     {
@@ -550,7 +549,8 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      * Update user data in database
      *
      * @param int $uid
-     * @param array $values
+     * @param string $confirmString
+     * @param array $data
      * @return bool
      * @throws tx_t3users_exceptions_User
      */
@@ -571,7 +571,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
 
     /**
      *
-     * @param tx_t3users_models_feuser $feUser
+     * @param tx_t3users_models_feuser $feuser
      * @param tx_rnbase_configurations $configurations
      */
     public function handleForgotPass_old($feuser, $configurations, $confId)
@@ -668,7 +668,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
 
     /**
      *
-     * @param tx_t3users_models_feuser $feUser
+     * @param tx_t3users_models_feuser $feuser
      * @param tx_rnbase_configurations $configurations
      * @param string $confId
      */

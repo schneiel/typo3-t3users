@@ -39,7 +39,7 @@ class tx_t3users_actions_ShowFeUser extends tx_rnbase_action_BaseIOC
    *
    * @param ArrayObject $parameters
    * @param tx_rnbase_configurations $configurations
-   * @param array $viewData
+   * @param ArrayObject $viewData
    * @return string|null error msg or null
    */
     public function handleRequest(&$parameters, &$configurations, &$viewData)

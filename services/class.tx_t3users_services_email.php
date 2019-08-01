@@ -472,6 +472,7 @@ class tx_t3users_services_email extends Tx_Rnbase_Service_Base
         if ($templateHtml) {
             $mailhtml = tx_rnbase_util_Templates::substituteMarkerArrayCached($templateHtml, $mailMarker, array(), $mailWrappedSubpart);
         }
+        $templateCC = '';
         if ($templateCC) {
             $mailtextCC = tx_rnbase_util_Templates::substituteMarkerArrayCached($templateCC, $mailMarker, array(), $mailWrappedSubpart);
         }
