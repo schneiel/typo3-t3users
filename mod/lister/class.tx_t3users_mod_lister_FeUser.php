@@ -160,7 +160,7 @@ class tx_t3users_mod_lister_FeUser extends Tx_Rnbase_Backend_Lister_AbstractList
 
     /**
      *
-     * @return tx_rnbase_mod_IDecorator
+     * @return string
      */
     protected function getDecoratorClass()
     {

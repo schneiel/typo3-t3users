@@ -42,7 +42,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      *
      * @param string $email
      * @param string $pids
-     * @return tx_t3users_models_feuser
+     * @return false|int
      */
     public function getUserByEmail($email, $pids = '')
     {
@@ -63,7 +63,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      *
      * @param string $email
      * @param string $pids
-     * @return tx_t3users_models_feuser
+     * @return false|int
      */
     public function getDisabledUserByEmail($email, $pids = '')
     {
@@ -626,7 +626,7 @@ class tx_t3users_services_feuser extends Tx_Rnbase_Service_Base implements Tx_Rn
      *
      * @param int $uid
      * @param string $confirmstring
-     * @return tx_t3users_models_feuser
+     * @return tx_t3users_models_feuser|null
      */
     public function getUserForConfirm($uid, $confirmstring)
     {
